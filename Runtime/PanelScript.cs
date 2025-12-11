@@ -5,6 +5,7 @@ using DG.Tweening;
 [RequireComponent(typeof(CanvasGroup))]
 public class PanelScript : MonoBehaviour
 {
+    
     public float exitTime = 1f;
     public bool disableImmediately;
     public bool unscaledTime;
