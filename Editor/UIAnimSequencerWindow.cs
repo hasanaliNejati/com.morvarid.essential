@@ -1,12 +1,13 @@
-﻿#if UNITY_EDITOR
-namespace Script.Utilities.UI.AutoAnim.Editor
+﻿using MorvaridEssential;
+
+#if UNITY_EDITOR
+namespace MorvaridEssential.Editor
 {
     // Assets/Editor/UIAnimSequencerWindow.cs
 using System;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
-using Script.Utilities.UI.AutoAnim; // namespace of your MenuItemsAnimatorSODriven
 
 public class UIAnimSequencerWindow : EditorWindow
 {

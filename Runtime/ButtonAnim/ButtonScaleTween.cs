@@ -1,6 +1,6 @@
 ﻿using UnityEngine.Serialization;
 
-namespace Script.Utilities.UI
+namespace MorvaridEssential
 {
     using UnityEngine;
     using UnityEngine.EventSystems;

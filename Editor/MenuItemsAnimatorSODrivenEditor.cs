@@ -3,7 +3,7 @@ using Sirenix.OdinInspector.Editor;
 using UnityEditor;
 using UnityEngine;
 
-namespace Script.Utilities.UI.AutoAnim.Editor
+namespace MorvaridEssential.Editor
 {
     [CustomEditor(typeof(Animalo))]
     public class MenuItemsAnimatorSODrivenEditor : OdinEditor

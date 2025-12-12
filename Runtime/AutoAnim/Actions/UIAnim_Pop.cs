@@ -1,4 +1,5 @@
-﻿namespace Script.Utilities.UI.AutoAnim.Actions
+﻿
+namespace MorvaridEssential
 {
 // UIAnim_Pop.cs
     using UnityEngine;

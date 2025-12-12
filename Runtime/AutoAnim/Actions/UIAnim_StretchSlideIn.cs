@@ -4,7 +4,7 @@
 using UnityEngine;
 using DG.Tweening;
 
-namespace Script.Utilities.UI.AutoAnim.Actions
+namespace MorvaridEssential
 {
     [CreateAssetMenu(menuName = "UI Anim/Stretch Slide In")]
     public class UIAnim_StretchSlideIn : UIAnimAction

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using Script.Utilities.UI.AutoAnim; // UIAnimAction & MenuItemsAnimatorSODriven
+using MorvaridEssential; // UIAnimAction & MenuItemsAnimatorSODriven
 
 public class SimpleMenuItemsTimelineWindow : EditorWindow
 {

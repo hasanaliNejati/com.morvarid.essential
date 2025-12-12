@@ -1,4 +1,5 @@
-﻿namespace Script.Utilities.UI.AutoAnim.Actions
+﻿
+namespace MorvaridEssential
 {
     using UnityEngine;
     using DG.Tweening;

@@ -1,13 +1,12 @@
-﻿using Sirenix.OdinInspector;
+﻿using System;
+using System.Collections.Generic;
+using DG.Tweening;
+using Sirenix.OdinInspector;
+using UnityEngine;
 
-namespace Script.Utilities.UI.AutoAnim
+namespace MorvaridEssential
 {
     // MenuItemsAnimatorSODriven.cs
-    using System;
-    using System.Collections.Generic;
-    using UnityEngine;
-    using DG.Tweening;
-
     [DisallowMultipleComponent]
     public class Animalo : MonoBehaviour
     {

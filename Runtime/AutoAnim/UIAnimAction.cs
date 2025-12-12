@@ -1,9 +1,9 @@
-﻿namespace Script.Utilities.UI.AutoAnim
+﻿using DG.Tweening;
+using UnityEngine;
+
+namespace MorvaridEssential
 {
     // UIAnimAction.cs
-    using UnityEngine;
-    using DG.Tweening;
-
     public abstract class UIAnimAction : ScriptableObject
     {
         [Header("Common")]

@@ -3,7 +3,7 @@
 using UnityEngine;
 using DG.Tweening;
 
-namespace Script.Utilities.UI.AutoAnim.Actions
+namespace MorvaridEssential
 {
     [CreateAssetMenu(menuName = "UI Anim/Axial Orbital In")]
     public class UIAnim_AxialOrbitalIn : UIAnimAction

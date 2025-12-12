@@ -1,8 +1,9 @@
 // UIAnim_Fade.cs
+
 using UnityEngine;
 using DG.Tweening;
 
-namespace Script.Utilities.UI.AutoAnim.Actions
+namespace MorvaridEssential
 {
     [CreateAssetMenu(menuName = "UI Anim/Fade")]
     public class UIAnim_Fade : UIAnimAction

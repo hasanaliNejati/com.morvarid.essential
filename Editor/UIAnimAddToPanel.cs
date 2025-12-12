@@ -1,5 +1,7 @@
-﻿#if UNITY_EDITOR
-namespace Script.Utilities.UI.AutoAnim.Editor
+﻿using MorvaridEssential;
+
+#if UNITY_EDITOR
+namespace MorvaridEssential.Editor
 {
     using System.Linq;
     using UnityEditor;

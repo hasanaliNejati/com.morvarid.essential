@@ -1,4 +1,4 @@
-namespace Script.Utilities.UI
+namespace MorvaridEssential
 {
     using UnityEngine;
     using DG.Tweening;
