@@ -42,6 +42,11 @@ public class PanelScript : MonoBehaviour
 
     public void SetActive(bool active)
     {
+        SetActive(active, false);
+    }
+
+    public void SetActive(bool active, bool immediate)
+    {
         if (active == _active) return;
 
         canvasGroup.DOKill();
@@ -52,31 +57,53 @@ public class PanelScript : MonoBehaviour
             if (_disablePending)
             {
                 _disablePending = false;
-                gameObject.SetActive(false);
             }
 
             if (!gameObject.activeSelf)
                 gameObject.SetActive(true);
+            
+            // Re-enable animator if it was disabled
+            if (animator && !animator.enabled)
+            {
+                animator.enabled = true;
+            }
+            
             onEnableEvent?.Invoke();
 
-            if (replayAnim && animator)
+            if (replayAnim && animator && !immediate)
             {
                 animator.Play(replayAnimName, -1, 0f);
             }
-            
-
 
             canvasGroup.blocksRaycasts = true;
-            canvasGroup.alpha = startFad ? 0f : 1f;
-            canvasGroup.DOFade(1f, exitTime).SetUpdate(unscaledTime);
+            
+            if (immediate)
+            {
+                canvasGroup.alpha = 1f;
+            }
+            else
+            {
+                canvasGroup.alpha = startFad ? 0f : 1f;
+                if (startFad)
+                {
+                    canvasGroup.DOFade(1f, exitTime).SetUpdate(unscaledTime);
+                }
+            }
         }
         else
         {
-            if (disableImmediately || exitTime <= 0)
+            if (immediate || disableImmediately || exitTime <= 0)
             {
+                // Stop all animations immediately
+                if (animator)
+                {
+                    animator.enabled = false;
+                }
+
                 canvasGroup.blocksRaycasts = false;
-                onDisableEvent?.Invoke();
+                canvasGroup.alpha = 0f;
                 _disablePending = false;
+                onDisableEvent?.Invoke();
                 gameObject.SetActive(false);
             }
             else
@@ -94,9 +121,11 @@ public class PanelScript : MonoBehaviour
                     .SetUpdate(unscaledTime)
                     .OnComplete(() =>
                     {
-                        //if (_active) return; 
-                        _disablePending = false;
-                        gameObject.SetActive(false);
+                        if (!_active)
+                        {
+                            _disablePending = false;
+                            gameObject.SetActive(false);
+                        }
                     });
             }
         }
