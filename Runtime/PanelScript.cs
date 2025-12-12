@@ -37,6 +37,7 @@ public class PanelScript : MonoBehaviour
         _active = gameObject.activeSelf;
         canvasGroup.alpha = _active ? 1f : 0f;
         canvasGroup.blocksRaycasts = _active;
+        TryGetComponent<Animator>(out animator);
     }
 
     public void SetActive(bool active)

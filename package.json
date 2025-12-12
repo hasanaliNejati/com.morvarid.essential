@@ -1,6 +1,6 @@
 {
   "name": "com.morvarid.essential",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Morvardi essential",
   "description": "essential package that use in any morvarid project",
   "unity": "2021.3",
