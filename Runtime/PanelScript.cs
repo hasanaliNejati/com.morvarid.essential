@@ -67,6 +67,12 @@ public class PanelScript : MonoBehaviour
             {
                 animator.enabled = true;
             }
+
+            if (animator)
+            {
+                //refresh animator to be able to replay animation
+                animator.Play(0, -1, 0f);
+            }
             
             onEnableEvent?.Invoke();
 
@@ -74,6 +80,8 @@ public class PanelScript : MonoBehaviour
             {
                 animator.Play(replayAnimName, -1, 0f);
             }
+            
+            
 
             canvasGroup.blocksRaycasts = true;
             
