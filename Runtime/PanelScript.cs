@@ -94,11 +94,6 @@ public class PanelScript : MonoBehaviour
         {
             if (immediate || disableImmediately || exitTime <= 0)
             {
-                // Stop all animations immediately
-                if (animator)
-                {
-                    animator.enabled = false;
-                }
 
                 canvasGroup.blocksRaycasts = false;
                 canvasGroup.alpha = 0f;
